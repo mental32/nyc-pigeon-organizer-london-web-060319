@@ -71,9 +71,6 @@ def form(name, data, gender)
   }
 end
 
-def pigeons(data)
-  data[:gender].collect { |k, v| [k, v]
-
 def nyc_pigeon_organizer(data)
   p data[:gender].each { |gender, arr| arr.collect { |pigeon| [pigeon, form(pigeon, data, gender)] } }
   # Hash[ *data[:gender].each { |gender, arr| arr.collect { |pigeon| [pigeon, form(pigeon, data, gender)] } }.flatten ]
