@@ -62,7 +62,7 @@ pigeon_data = {  :color => {
 
 
 def nyc_pigeon_organizer(data)
-  find =
+  find = -> { data[name].select { |_, v| v.include?(k) } }
 
   def form(name)
 
