@@ -80,4 +80,4 @@ def nyc_pigeon_organizer(data)
   Hash[ *data[:gender].each { |gender, arr| arr.collect { |pigeon| [pigeon, form(pigeon, data, gender)] } }.flatten ]
 end
 
-# nyc_pigeon_organizer pigeon_data
+nyc_pigeon_organizer pigeon_data
