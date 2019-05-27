@@ -72,6 +72,8 @@ def nyc_pigeon_organizer(data)
     }
   }
 
+  f = ->(v) [p v, v].last
+
   Hash[ *(data[:gender][:male].concat(data[:gender][:female])).collect { |pigeon| p pigeon }.flatten ]
 end
 
