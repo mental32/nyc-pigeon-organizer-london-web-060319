@@ -63,7 +63,7 @@ def find(key, name, data)
   data[key].select { |_, v| v.include? name }
 end
 
-def form(name, data)
+def form(name, data, gender)
   {
       color: find(:color, name, data).keys.map { |k| k.to_s },
       gender: [find(:gender, name, data).keys.first.to_s],
