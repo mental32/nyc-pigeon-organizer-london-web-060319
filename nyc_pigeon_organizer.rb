@@ -63,8 +63,6 @@ def find(key, name, data)
   data[key].select { |_, v| v.include? name }
 end
 
-require 'pp'
-
 def form(name, data)
   {
       color: find(:color, name, data).keys.map { |k| k.to_s },
@@ -77,4 +75,4 @@ def nyc_pigeon_organizer(data)
   Hash[ *data[:gender][:male].concat(data[:gender][:female]).collect { |pigeon| [pigeon, form(pigeon, data)] }.flatten ]
 end
 
-nyc_pigeon_organizer pigeon_data
+# nyc_pigeon_organizer pigeon_data
