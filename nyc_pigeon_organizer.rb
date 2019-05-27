@@ -60,16 +60,19 @@ pigeon_data = {  :color => {
 # }
 
 
-
-def nyc_pigeon_organizer(data)
-  find = ->(k, name) { data[name].select { |_, v| v.include?(k) } }
-
-  form = ->(n) {
+def form(name, data) {
     {
       color: [find(:color, n).keys.map { |k| k.to_s }],
       gender: [find(:gender, n).keys.first.to_s],
       lives: [find(:lives, n).keys.first]
     }
+}
+
+def nyc_pigeon_organizer(data)
+  find = ->(k, name) { data[name].select { |_, v| v.include?(k) } }
+
+  form = ->(n) {
+
   }
 
   f = ->(v) { [p(v), v].last }
