@@ -59,7 +59,7 @@ pigeon_data = {  :color => {
 #   }
 # }
 
-def find(key, name)
+def find(key, name, dat)
   data[name].select { |_, v| v.include? name }
 end
 
