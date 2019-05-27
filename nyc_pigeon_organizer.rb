@@ -74,7 +74,7 @@ def form(name, data)
 end
 
 def nyc_pigeon_organizer(data)
-  pp data[:gender][:male].concat(data[:gender][:female]).collect { |pigeon| form(pigeon, data) }
+  pp data[:gender][:male].concat(data[:gender][:female]).collect { |pigeon| [pigeon,form(pigeon, data)] }
 end
 
 nyc_pigeon_organizer pigeon_data
