@@ -72,7 +72,7 @@ def nyc_pigeon_organizer(data)
     }
   }
 
-  Hash[ *(data[:gender][:male].concat(data[:gender][:female])).collect { |pigeon| form.call(pigeon) }.flatten ]
+  Hash[ *(data[:gender][:male].concat(data[:gender][:female])).collect { |pigeon| form.call pigeo) }.flatten ]
 end
 
 nyc_pigeon_organizer pigeon_data
