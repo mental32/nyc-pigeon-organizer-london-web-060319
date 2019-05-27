@@ -65,9 +65,9 @@ end
 
 def form(name, data)
     {
-      color: [find(:color, name).keys.map { |k| k.to_s }],
-      gender: [find(:gender, name).keys.first.to_s],
-      lives: [find(:lives, name).keys.first]
+      color: [find(:color, name, data).keys.map { |k| k.to_s }],
+      gender: [find(:gender, name, data).keys.first.to_s],
+      lives: [find(:lives, name, data).keys.first]
     }
 end
 
