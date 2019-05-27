@@ -65,8 +65,6 @@ def nyc_pigeon_organizer(data)
   find = ->(k) { data[name].select { |_, v| v.include?(k) } }
 
   def form(name)
-
-
     {
       color: [find(:color).keys.map { |k| k.to_s }],
       gender: [find(:gender).keys.first.to_s],
