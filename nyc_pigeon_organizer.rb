@@ -60,10 +60,7 @@ pigeon_data = {  :color => {
 # }
 
 def find(key, name, data)
-  p key
-  p name
-  p data
-  data[name].select { |_, v| v.include? name }
+  data[key].select { |_, v| v.include? name }
 end
 
 def form(name, data)
