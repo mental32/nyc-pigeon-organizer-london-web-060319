@@ -74,8 +74,7 @@ end
 require 'pp'
 
 def nyc_pigeon_organizer(data)
-  pp data[:gender].map { |gender, arr| arr.collect { |pigeon| [pigeon, form(pigeon, data, gender)] } }.flatten
-  # Hash[ *data[:gender].each { |gender, arr| arr.collect { |pigeon| [pigeon, form(pigeon, data, gender)] } }.flatten ]
+  Hash[ *data[:gender].map { |gender, arr| arr.collect { |pigeon| [pigeon, form(pigeon, data, gender)] } }.flatten ]
 end
 
 nyc_pigeon_organizer pigeon_data
