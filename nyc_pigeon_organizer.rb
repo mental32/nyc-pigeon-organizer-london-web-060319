@@ -71,8 +71,6 @@ def form(name, data, gender)
   }
 end
 
-require 'pp'
-
 def nyc_pigeon_organizer(data)
   Hash[ *data[:gender].map { |gender, arr| arr.collect { |pigeon| [pigeon, form(pigeon, data, gender)] } }.flatten ]
 end
