@@ -64,13 +64,13 @@ pigeon_data = {  :color => {
 def nyc_pigeon_organizer(data)
   find = ->(k) { data[name].select { |_, v| v.include?(k) } }
 
-  def form(name)
+  form = ->(name) {
     {
       color: [find(:color).keys.map { |k| k.to_s }],
       gender: [find(:gender).keys.first.to_s],
       lives: [find(:lives).keys.first]
     }
-  end
+  }
 
   Hash[ *(data[:gender][:male].concat(data[:gender][:female])).collect { |pigeon| form(pigeon) }.flatten ]
 end
